@@ -5,3 +5,4 @@ $header = 'Location: ' . \X\Blc\REDIRECTSECURE . 'x.php';
 header($header);
 exit();
 
+
