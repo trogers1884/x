@@ -4,7 +4,7 @@
  * @author J.C. Thomas Rogers III
  * @version 0.50
  * @version created 2015-04-30
- * @version last updated: 2015-05-11
+ * @version last updated: 2015-06-14
  * @copyright (c) 2015, J.C. Thomas Rogers III
  */
 
@@ -96,12 +96,12 @@ class Page
                 $this->getInstanceId() . '<br>' .
                 'This is the page body</body>';
         $this->body .= '<br>' .
-                '\X\CONSTANTS\SERVERNAME: ' . \X\CONSTANTS\SERVERNAME . '<br>' .
-                '\X\CONSTANTS\FILEPATH: ' . \X\CONSTANTS\FILEPATH . '<br>' .
-                '\X\CONSTANTS\WEBROOT: ' . \X\CONSTANTS\WEBROOT . '<br>' .
-                '\X\CONSTANTS\PATH: ' . \X\CONSTANTS\PATH . '<br>' .
-                '\X\CONSTANTS\HTTPADDRESS: ' . \X\CONSTANTS\HTTPADDRESS . '<br>' .
-                '\X\CONSTANTS\HTTPSADDRESS: ' . \X\CONSTANTS\HTTPSADDRESS . '<br>' .
+                '\X\Blc\SERVERNAME: ' . \X\Blc\SERVERNAME . '<br>' .
+                '\X\Blc\FILEPATH: ' . \X\Blc\FILEPATH . '<br>' .
+                '\X\Blc\WEBROOT: ' . \X\Blc\WEBROOT . '<br>' .
+                '\X\Blc\PATH: ' . \X\Blc\PATH . '<br>' .
+                '\X\Blc\HTTPADDRESS: ' . \X\Blc\HTTPADDRESS . '<br>' .
+                '\X\Blc\HTTPSADDRESS: ' . \X\Blc\HTTPSADDRESS . '<br>' .
                 '';
         $this->body .= '<br>';
         foreach($this->getGet() as $getKey => $getValue){
