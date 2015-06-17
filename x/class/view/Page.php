@@ -4,7 +4,7 @@
  * @author J.C. Thomas Rogers III
  * @version 0.50
  * @version created 2015-04-30
- * @version last updated: 2015-06-14
+ * @version last updated: 2015-06-17
  * @copyright (c) 2015, J.C. Thomas Rogers III
  */
 
@@ -75,7 +75,7 @@ class Page
     {
         $this->head = '<head>' .
                 '<title>Page Title</title>' .
-                '</head>';
+                '</head>' . PHP_EOL;
     }
     public function getHead()
     {
@@ -91,31 +91,31 @@ class Page
     }
     public function setBody()
     {
-        $this->body = '<body>' . 
-                $this->getSessionId() . '<br>' .
-                $this->getInstanceId() . '<br>' .
-                'This is the page body</body>';
-        $this->body .= '<br>' .
-                '\X\Blc\SERVERNAME: ' . \X\Blc\SERVERNAME . '<br>' .
-                '\X\Blc\FILEPATH: ' . \X\Blc\FILEPATH . '<br>' .
-                '\X\Blc\WEBROOT: ' . \X\Blc\WEBROOT . '<br>' .
-                '\X\Blc\PATH: ' . \X\Blc\PATH . '<br>' .
-                '\X\Blc\HTTPADDRESS: ' . \X\Blc\HTTPADDRESS . '<br>' .
-                '\X\Blc\HTTPSADDRESS: ' . \X\Blc\HTTPSADDRESS . '<br>' .
+        $this->body = '<body>' . PHP_EOL .
+                $this->getSessionId() . '<br>' . PHP_EOL . 
+                $this->getInstanceId() . '<br>' . PHP_EOL .
+                'This is the page body</body>' . '<br>' . PHP_EOL ;
+        $this->body .= '' .
+                '\X\Blc\SERVERNAME: ' . \X\Blc\SERVERNAME . '<br>' . PHP_EOL .
+                '\X\Blc\FILEPATH: ' . \X\Blc\FILEPATH . '<br>' . PHP_EOL .
+                '\X\Blc\WEBROOT: ' . \X\Blc\WEBROOT . '<br>' . PHP_EOL . 
+                '\X\Blc\PATH: ' . \X\Blc\PATH . '<br>' . PHP_EOL .
+                '\X\Blc\HTTPADDRESS: ' . \X\Blc\HTTPADDRESS . '<br>' . PHP_EOL .
+                '\X\Blc\HTTPSADDRESS: ' . \X\Blc\HTTPSADDRESS . '<br>' . PHP_EOL .
                 '';
         $this->body .= '<br>';
         foreach($this->getGet() as $getKey => $getValue){
-            $this->body .= "GET: {$getKey}: {$getValue}<br>"; 
+            $this->body .= "GET: {$getKey}: {$getValue}<br>" . PHP_EOL; 
         }
         foreach($this->getPost() as $postKey => $postValue){
-            $this->body .= "Post: {$postKey}: {$postValue}<br>"; 
+            $this->body .= "Post: {$postKey}: {$postValue}<br>" . PHP_EOL; 
         }
     }
 
     public function setHtml()
     {
-        $this->html = '<!DOCTYPE html>' . 
-                '<html lang="en">' .
+        $this->html = '<!DOCTYPE html>' . PHP_EOL .
+                '<html lang="en">' . PHP_EOL .
                 $this->getHead() .
                 $this->getBody() .
                 '</html>';
